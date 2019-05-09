@@ -11,7 +11,7 @@ export default class SignupForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
   }
-  
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
@@ -23,8 +23,8 @@ export default class SignupForm extends Component {
       <div>
         <p>Signup!</p>
       <form onSubmit={this.handleSubmit}>
-        <input type='text' name='username' placeholder='Name' handleChange={this.handleChange}></input>
-        <input type='text' name='password' placeholder='Password' handleChange={this.handleChange}></input>
+        <input type='text' name='username' placeholder='Name' onChange={this.handleChange}></input>
+        <input type='text' name='password' placeholder='Password' onChange={this.handleChange}></input>
         <input type='submit'></input>
       </form>
       <p>Already have an account? <Link to='/LoginForm'>Login here!</Link></p>

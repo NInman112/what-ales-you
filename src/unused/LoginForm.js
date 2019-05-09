@@ -22,8 +22,8 @@ export default class LoginForm extends Component {
     return(
       <div>
       <form onSubmit={this.handleSubmit}>
-        <input type='text' name='username' placeholder='Name' handleChange={this.handleChange}></input>
-        <input type='text' name='password' placeholder='Password' handleChange={this.handleChange}></input>
+        <input type='text' name='username' placeholder='Name' onChange={this.handleChange}></input>
+        <input type='text' name='password' placeholder='Password' onChange={this.handleChange}></input>
         <input type='submit'></input>
       </form>
       <p>Dont have an account? <Link to='/SignupForm'>Sign up here!</Link></p>

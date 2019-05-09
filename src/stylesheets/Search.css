@@ -1,0 +1,12 @@
+.inputBar {
+  font-size: 24;
+  display: 'block';
+  width: 85%;
+  padding-left: 8px;
+}
+
+.inputButton {
+  font-size: 24;
+  display: 'block';
+  width: 12%;
+}

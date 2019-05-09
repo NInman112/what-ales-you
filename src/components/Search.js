@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
+import '../stylesheets/Search.css';
+import { connect } from 'react-redux'
+import fetchBeers from '../actions/fetchBeers'
+import BeerList from '../containers/BeerList'
 
-export default class Search extends Component {
-  
-  state = {
-    searchTerm: ''
+class Search extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      searchTerm: ''
+    }
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
+    this.props.fetchBeers(this.state)
+    this.setState({searchTerm: ''})
   }
 
   handleChange = (e) => {
@@ -17,14 +25,16 @@ export default class Search extends Component {
   }
 
   render() {
-    return(
+      return(
       <div>
-      <p>Search!</p>
-      <form onSubmit={this.handleSubmit}>
-        <input type='text' name='searchTerm' placeholder='Search' handleChange={this.handleChange}></input>
-        <input type='submit' value='Search'></input>
-      </form>
+        <form onSubmit={this.handleSubmit} >
+          <input type='text' name='searchTerm' placeholder='Enter beer name or type here' onChange={this.handleChange} value={this.state.searchTerm} className='inputBar'></input>
+          <input type='submit' value='Search' className='inputButton'></input>
+        </form>
+        <BeerList />
       </div>
     )
   }
 }
+
+export default connect(null, {fetchBeers})(Search)
