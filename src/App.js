@@ -1,12 +1,10 @@
 import React, { Component  } from 'react';
 import './stylesheets/App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { connect } from 'react-redux'
 import Navbar from './containers/Navbar'
 import Home from './containers/Home'
 import Favorites from './components/Favorites'
 import About from './containers/About'
-import { getBeers } from './actions'
 // import Login from './components/Login'
 // import SignupForm from './components/SignupForm'
 // import Search from './components/Search'
@@ -14,13 +12,8 @@ import { getBeers } from './actions'
 
 class App extends Component {
 
-  componentDidMount() {
-    this.props.getBeers()
-  }
 
   render(){
-    const beers = this.props.beers.map((beer, i) => <li key={i}>{beer.name}</li>)
-
     return (
       <div className="App">
         <table className='titleBar'>
@@ -50,19 +43,9 @@ class App extends Component {
             */}
           </React.Fragment>
         </Router>
-        <ul>
-          { this.props.loading ? <li>loading...</li> : beers }
-        </ul>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    beers: state.beersReducer.beers,
-    loading: state.beersReducer.loading
-  }
-}
-
-export default connect(mapStateToProps, { getBeers })(App);
+export default App;

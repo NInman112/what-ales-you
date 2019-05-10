@@ -7,8 +7,6 @@ export default function beersReducer(state = {
       return {...state, loading: true}
     case 'LOADED_BEERS':
       return {...state, loading: false, beers: action.payload}
-    case 'ADD_BEERS':
-      return {...state, loading: false, beers: action.payload}
     default:
       return state
   }
