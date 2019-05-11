@@ -36,7 +36,7 @@ export class Favorites extends Component {
     </FlexView>)
     return(
       <div>
-        { this.props.loading ? <h1>loading...</h1>  : favBeers }
+        { this.props.loading ?  '' : favBeers }
       </div>
     )
   }

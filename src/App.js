@@ -25,12 +25,10 @@ class App extends Component {
             </tbody>
           </table>
           <Router>
-            <React.Fragment>
-              <Navbar />
-              <Route exact path='/' component={ Home } />
-              <Route path='/favorites' component={ Favorites } />
-              <Route path='/about' component={ About } />
-            </React.Fragment>
+            <Navbar />
+            <Route exact path='/' component={ Home } />
+            <Route path='/favorites' component={ Favorites } />
+            <Route path='/about' component={ About } />
           </Router>
       </div>
     )
