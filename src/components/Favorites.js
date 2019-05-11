@@ -18,9 +18,8 @@ export class Favorites extends Component {
 
   render() {
     const favBeers = this.props.favBeers && this.props.favBeers.map((beer, i) =>
-    <FlexView hAlignContent='center' column='true' marginBottom='50px'>
+    <FlexView hAlignContent='center' column='true' marginBottom='25px' marginTop='25px'>
       <Card style={{ width: '30rem'}}>
-        <Card.Img variant='top' src='not-available-circle.svg' width='30%'/>
         <h2>{beer.name}</h2>
         <Card.Body>
           <Card.Text>

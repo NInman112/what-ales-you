@@ -16,7 +16,7 @@ class BeerList extends React.Component {
     const beers = this.props.beers.map(beer =>
       <FlexView hAlignContent='center' column='true' marginBottom='50px'>
         <Card style={{ width: '30rem'}}>
-          <Card.Img variant='top' src={beer.labels !== undefined ? beer.labels.medium : 'not-available-circle.svg' } width='30%'/>
+          {beer.labels !== undefined ? <Card.Img variant='top' src={beer.labels.medium} width='30%'/> : '' }
           <h2>{beer.name}</h2>
           <Card.Body>
             <Card.Text>
