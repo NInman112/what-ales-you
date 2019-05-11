@@ -1,12 +1,22 @@
 .inputBar {
-  font-size: 24;
+  font-size: 18px;
   display: 'block';
-  width: 85%;
-  padding-left: 8px;
+  width: 55%;
+}
+
+.inputBar:hover {
+  background-color: #f8f8f8;
+  border-radius: 6px;
 }
 
 .inputButton {
-  font-size: 24;
-  display: 'block';
-  width: 12%;
+  background-color: #e7e7e7;
+  height: 31px;
+  border-radius: 2px;
+  font-size: 18px;
+}
+
+.inputButton:hover {
+  background-color: #e0e0e0;
+  border-radius: 6px;
 }

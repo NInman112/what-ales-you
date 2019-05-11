@@ -4,10 +4,10 @@ import '../stylesheets/navbar.css';
 
 const Navbar = () => {
   return(
-    <div className='navbar'>
-      <button><NavLink to='/' exact>Home </NavLink></button>
-      <button><NavLink to='/favorites' exact> Favorites </NavLink></button>
-      <button><NavLink to='/about' exact> About </NavLink></button>
+    <div className='navbarBack'>
+      <NavLink className='buttonNav' to='/' exact>Home </NavLink>
+      <NavLink className='buttonNav' to='/favorites' exact> Favorites </NavLink>
+      <NavLink className='buttonNav' to='/about' exact> About </NavLink>
     </div>
   )
 }

@@ -4,8 +4,9 @@
 }
 
 .titleBar {
-  background-color: #000;
+  background-color: #303030;
   display: block;
   color: #fff;
-  padding-left: 16px;
+  padding-left: 20%;
+  padding-right: 20%;
 }

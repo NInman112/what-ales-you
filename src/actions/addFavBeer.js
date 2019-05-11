@@ -10,6 +10,11 @@ export const addFavBeer = (data) => {
       body: JSON.stringify({
         name: data.name,
         description: data.style.description,
+        ibuMin: data.style.ibuMin,
+        ibuMax: data.style.ibuMax,
+        abvMin: data.style.abvMin,
+        abvMax: data.style.abvMax,
+        avaible: data.isretired
       })
     })
   }

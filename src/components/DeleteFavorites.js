@@ -11,7 +11,7 @@ class DeleteFavorites extends React.Component {
 
   render() {
     return(
-      <button onClick={this.onClick}>Delete</button>
+      <button onClick={this.onClick}>Remove {this.props.name}</button>
     )
   }
 }
