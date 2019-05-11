@@ -4,7 +4,6 @@ import fetchBeers from '../actions/fetchBeers'
 import SaveFavorites from '../components/SaveFavorites'
 import FlexView from 'react-flexview'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import '../stylesheets/list.css';
@@ -13,8 +12,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 class BeerList extends React.Component {
 
   render() {
-    const beers = this.props.beers.map(beer =>
-      <FlexView hAlignContent='center' column='true' marginBottom='50px'>
+    const beers = this.props.beers.map((beer, i) =>
+      <FlexView hAlignContent='center' marginBottom='50px' key={i}>
         <Card style={{ width: '30rem'}}>
           {beer.labels !== undefined ? <Card.Img variant='top' src={beer.labels.medium} width='30%'/> : '' }
           <h2>{beer.name}</h2>

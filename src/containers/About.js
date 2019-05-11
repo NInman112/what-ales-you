@@ -7,7 +7,7 @@ export default class About extends Component {
     return(
       <div>
         <div>
-          <a href='https://flatironschool.com' target='_blank'><img src='FS_wiki.png' width='30%'></img></a>
+          <a href='https://flatironschool.com' target='_blank' rel='noopener noreferrer'><img src='FS_wiki.png' width='30%' alt='flatiron-logo'></img></a>
           <p className='aboutPTag'>
             This web application was built as a Flatiron React project and utilizes a backend Rails API which saves user data and a React frontend to provide the user interface.
           </p>

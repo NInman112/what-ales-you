@@ -5,7 +5,6 @@ import Navbar from './containers/Navbar'
 import Home from './containers/Home'
 import Favorites from './components/Favorites'
 import About from './containers/About'
-import FlexView from 'react-flexview'
 
 class App extends Component {
 

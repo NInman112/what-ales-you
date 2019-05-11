@@ -4,7 +4,6 @@ import DeleteFavorites from './DeleteFavorites'
 import { connect } from 'react-redux'
 import FlexView from 'react-flexview'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import '../stylesheets/list.css';
@@ -18,7 +17,7 @@ export class Favorites extends Component {
 
   render() {
     const favBeers = this.props.favBeers && this.props.favBeers.map((beer, i) =>
-    <FlexView hAlignContent='center' column='true' marginBottom='25px' marginTop='25px'>
+    <FlexView hAlignContent='center' marginBottom='25px' marginTop='25px' key={i}>
       <Card style={{ width: '30rem'}}>
         <h2>{beer.name}</h2>
         <Card.Body>
