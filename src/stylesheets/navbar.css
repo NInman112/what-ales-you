@@ -9,6 +9,9 @@
 
 .buttonNav:hover {
   background-color: #202020;
+  color: #fff;
+  text-decoration: none;
+
 }
 
 .navbarBack {
