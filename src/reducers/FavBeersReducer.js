@@ -9,6 +9,8 @@ export default function favBeersReducer(state = {
       return {...state, loading: false, favBeers: action.payload}
     case 'ADD_FAV_BEERS':
       return {...state, loading: false, favBeers: action.payload}
+    case 'DELETE_FAV_BEERS':
+      return {...state, loading: false, favBeers: action.payload}
     default:
       return state
   }

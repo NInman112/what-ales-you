@@ -5,13 +5,8 @@ import Navbar from './containers/Navbar'
 import Home from './containers/Home'
 import Favorites from './components/Favorites'
 import About from './containers/About'
-// import Login from './components/Login'
-// import SignupForm from './components/SignupForm'
-// import Search from './components/Search'
-
 
 class App extends Component {
-
 
   render(){
     return (
@@ -36,11 +31,6 @@ class App extends Component {
             <Route exact path='/' component={ Home } />
             <Route path='/favorites' component={ Favorites } />
             <Route path='/about' component={ About } />
-            {/*
-            <Route path='/login' component={ Login } />
-            <Route path='/signup' component={ SignupForm } />
-            <Route path='/search' component={ Search } />
-            */}
           </React.Fragment>
         </Router>
       </div>

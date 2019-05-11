@@ -1,22 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
+import { addFavBeer } from '../actions/addFavBeer'
 
-export default class SaveFavorites extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      beer: ''
-    }
-  }
+class SaveFavorites extends React.Component {
 
   onClick = (e) => {
     e.preventDefault()
-    localStorage.setItem(this.props.beer.beer.id, JSON.stringify(this.props.beer.beer))
-    console.log(this.props.beer.beer)
+    this.props.addFavBeer(this.props.beer.beer)
   }
 
   render() {
     return(
-        <button onClick={this.onClick}>Save Favorite</button>
-      )
+      <button onClick={this.onClick}>Save Favorite</button>
+    )
   }
 }
+
+export default connect(null, {addFavBeer})(SaveFavorites)
