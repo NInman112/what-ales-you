@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This react app fetches from an external API based on user input and displays the results.  Items are savable and are stored on a backend rails API.
+This react app fetches from an external API based on user input and displays the results.  Items are savable and are stored on a backend rails API (https://github.com/NInman112/what-ales-you-api).
 
 
 
