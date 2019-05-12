@@ -1,19 +1,47 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addFavBeer } from '../actions/addFavBeer'
+import { getFavBeers } from '../actions/getFavBeers'
+
 
 class SaveFavorites extends React.Component {
+  state = {
+    buttonText: 'Save Favorite',
+    isButtonDisabled: false
+  }
+
+  componentDidMount() {
+    this.props.getFavBeers()
+  }
+
+  componentWillReceiveProps() {
+    this.props.favBeers.map((beer) =>
+      (beer.name === this.props.beer.beer.name ? (
+        this.setState({isButtonDisabled: true, buttonText: 'In Favorites'})
+      ) : (''))
+    )
+  }
 
   onClick = (e) => {
     e.preventDefault()
     this.props.addFavBeer(this.props.beer.beer)
+    this.setState({buttonText:'Saved!'})
+    this.setState({isButtonDisabled: true})
   }
 
   render() {
+    const { text } = this.state
     return(
-      <button onClick={this.onClick}>Save Favorite</button>
+      <button onClick={this.onClick} disabled={this.state.isButtonDisabled}>{this.state.buttonText}</button>
     )
   }
 }
 
-export default connect(null, {addFavBeer})(SaveFavorites)
+const mapStateToProps = state => {
+  return {
+    favBeers: state.favBeersReducer.favBeers,
+    loading: state.favBeersReducer.loading
+  }
+}
+
+export default connect(mapStateToProps, {addFavBeer, getFavBeers})(SaveFavorites)

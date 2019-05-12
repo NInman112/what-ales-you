@@ -17,6 +17,7 @@ class BeerList extends React.Component {
         <Card style={{ width: '30rem'}}>
           {beer.labels !== undefined ? <Card.Img variant='top' src={beer.labels.medium} width='30%'/> : '' }
           <h2>{beer.name}</h2>
+          {console.log(beer)}
           <Card.Body>
             <Card.Text>
               {beer.description}
@@ -27,7 +28,7 @@ class BeerList extends React.Component {
               IBU: {beer.style !== undefined ? beer.style.ibuMin : 'N/A'} - {beer.style !== undefined ? beer.style.ibuMax : 'N/A'}(min-max)
               ABV: {beer.style !== undefined ? beer.style.abvMin : 'N/A'} - {beer.style !== undefined ? beer.style.abvMax : 'N/A'}(min-max)
             </ListGroupItem>
-            <ListGroupItem>Status:{beer.isretired === true ? 'Discountinued' : 'Available'}</ListGroupItem>
+            <ListGroupItem>Status: {beer.isRetired === "Y" ? 'Discontinued' : 'Available'}</ListGroupItem>
           </ListGroup>
           <Card.Body>
             <SaveFavorites beer={{beer}}/>
@@ -47,7 +48,7 @@ BeerList.defaultProps = {beers: []}
 function mapStateToProps(state) {
   return {
     beers: state.beersReducer.beers,
-    loading: state.beersReducer.loading
+    loading: state.beersReducer.loading,
   }
 }
 

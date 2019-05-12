@@ -27,7 +27,7 @@ export class Favorites extends Component {
         </Card.Body>
         <ListGroup className='list-group-flush'>
           <ListGroupItem>IBU: {beer.ibuMin} - {beer.ibuMax}(min-max) ABV: {beer.abvMin} - {beer.abvMax}(min-max)</ListGroupItem>
-          <ListGroupItem>Status:{beer.isretired === true ? 'Discountinued' : 'Available'}</ListGroupItem>
+          <ListGroupItem>Status:{beer.isretired === "Y" ? 'Discontinued' : 'Available'}</ListGroupItem>
         </ListGroup>
         <Card.Body>
           <DeleteFavorites id={beer.id} name={beer.name}/>
