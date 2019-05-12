@@ -30,7 +30,11 @@ class App extends Component {
             <Route path='/favorites' component={ Favorites } />
             <Route path='/about' component={ About } />
           </Router>
+
       </div>
+
+
+
     )
   }
 }

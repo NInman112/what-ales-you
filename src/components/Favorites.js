@@ -37,6 +37,7 @@ export class Favorites extends Component {
     return(
       <div>
         { this.props.loading ?  '' : favBeers }
+        { favBeers.length === 0 ? 'You dont have any favorites!' : ''}
       </div>
     )
   }
