@@ -1,7 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import fetchBeers from '../actions/fetchBeers'
-import SaveFavorites from '../components/SaveFavorites'
+import DeleteFavorites from '../containers/DeleteFavorites'
 import FlexView from 'react-flexview'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
@@ -9,15 +7,13 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import '../stylesheets/list.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
-class BeerList extends React.Component {
-
-  render() {
-    const beers = this.props.beers.map((beer, i) =>
+const FavoriteList = (props) => {
+  return(
+    props.beers.map((beer, i) =>
       <FlexView hAlignContent='center' marginBottom='50px' key={i}>
         <Card style={{ width: '30rem'}}>
           {beer.labels !== undefined ? <Card.Img variant='top' src={beer.labels.medium} width='30%'/> : '' }
           <h2>{beer.name}</h2>
-          {console.log(beer)}
           <Card.Body>
             <Card.Text>
               {beer.description}
@@ -31,25 +27,12 @@ class BeerList extends React.Component {
             <ListGroupItem>Status: {beer.isRetired === "Y" ? 'Discontinued' : 'Available'}</ListGroupItem>
           </ListGroup>
           <Card.Body>
-            <SaveFavorites beer={{beer}}/>
+            <DeleteFavorites id={beer.id} name={beer.name}/>
           </Card.Body>
         </Card>
       </FlexView>
     )
-      return(
-      <div>
-        { this.props.loading ? <h1>loading...</h1> : beers }
-      </div>
-    )
-  }
+  )
 }
 
-BeerList.defaultProps = {beers: []}
-function mapStateToProps(state) {
-  return {
-    beers: state.beersReducer.beers,
-    loading: state.beersReducer.loading,
-  }
-}
-
-export default connect(mapStateToProps, {fetchBeers})(BeerList)
+export default FavoriteList

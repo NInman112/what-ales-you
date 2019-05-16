@@ -7,7 +7,9 @@ const fetchBeers = (state) => {
     dispatch({type: 'LOADING_BEERS'})
     return axios.get(NEW_URL)
     .then(response => response.data.data)
-    .then(beerList => dispatch({type:'LOADED_BEERS', payload: beerList }))
+    .then(beerList => {
+      return dispatch({type:'LOADED_BEERS', payload: beerList })
+    })
   }
 }
 

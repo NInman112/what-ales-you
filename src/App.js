@@ -1,10 +1,10 @@
 import React, { Component  } from 'react';
 import './stylesheets/App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navbar from './containers/Navbar'
-import Home from './containers/Home'
-import Favorites from './components/Favorites'
-import About from './containers/About'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Favorites from './containers/Favorites'
+import About from './components/About'
 
 class App extends Component {
 
@@ -30,11 +30,7 @@ class App extends Component {
             <Route path='/favorites' component={ Favorites } />
             <Route path='/about' component={ About } />
           </Router>
-
       </div>
-
-
-
     )
   }
 }

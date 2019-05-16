@@ -16,7 +16,7 @@ class SaveFavorites extends React.Component {
 
   componentWillReceiveProps() {
     this.props.favBeers.map((beer) =>
-      (beer.name === this.props.beer.beer.name ? (
+      (beer.name === this.props.beer.name ? (
         this.setState({isButtonDisabled: true, buttonText: 'In Favorites'})
       ) : (''))
     )
@@ -24,13 +24,12 @@ class SaveFavorites extends React.Component {
 
   onClick = (e) => {
     e.preventDefault()
-    this.props.addFavBeer(this.props.beer.beer)
+    this.props.addFavBeer(this.props.beer)
     this.setState({buttonText:'Saved!'})
     this.setState({isButtonDisabled: true})
   }
 
   render() {
-    const { text } = this.state
     return(
       <button onClick={this.onClick} disabled={this.state.isButtonDisabled}>{this.state.buttonText}</button>
     )

@@ -1,0 +1,32 @@
+import React, { Component } from 'react'
+import { getFavBeers } from '../actions/getFavBeers'
+import FavoriteList from '../components/FavoriteList'
+import { connect } from 'react-redux'
+
+
+export class Favorites extends Component {
+
+  componentDidMount() {
+    this.props.getFavBeers()
+  }
+
+  render() {
+    const noFavs = this.props.favBeers && this.props.favBeers.length === 0 ? "You haven't saved any favorites!" : ''
+    return(
+      <div>
+        { noFavs }
+        { <FavoriteList beers={this.props.favBeers} /> }
+      </div>
+    )
+  }
+}
+
+Favorites.defaultProps = {favBeers: []}
+const mapStateToProps = state => {
+  return {
+    favBeers: state.favBeersReducer.favBeers,
+    loading: state.favBeersReducer.loading
+  }
+}
+
+export default connect(mapStateToProps, { getFavBeers })(Favorites);
