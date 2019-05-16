@@ -1,3 +1,19 @@
 .card-img-top {
   padding-top: 10px;
 }
+
+.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+  padding: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.button:hover {
+  color: grey;
+  text-decoration: none;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../stylesheets/list.css';
 import { connect } from 'react-redux'
 import { deleteFavBeer } from '../actions/deleteFavBeer'
 
@@ -11,7 +12,7 @@ class DeleteFavorites extends React.Component {
 
   render() {
     return(
-      <button onClick={this.onClick}> Remove {this.props.name}</button>
+      <button onClick={this.onClick} className='button'> Remove {this.props.name}</button>
     )
   }
 }

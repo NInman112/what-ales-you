@@ -1,5 +1,7 @@
 import React from 'react'
 import DeleteFavorites from '../containers/DeleteFavorites'
+import WebSearchBeer from './WebSearchBeer'
+
 import FlexView from 'react-flexview'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
@@ -12,7 +14,6 @@ const FavoriteList = (props) => {
     props.beers.map((beer, i) =>
       <FlexView hAlignContent='center' marginBottom='50px' key={i}>
         <Card style={{ width: '30rem'}}>
-          {beer.labels !== undefined ? <Card.Img variant='top' src={beer.labels.medium} width='30%'/> : '' }
           <h2>{beer.name}</h2>
           <Card.Body>
             <Card.Text>
@@ -27,7 +28,8 @@ const FavoriteList = (props) => {
             <ListGroupItem>Status: {beer.isRetired === "Y" ? 'Discontinued' : 'Available'}</ListGroupItem>
           </ListGroup>
           <Card.Body>
-            <DeleteFavorites id={beer.id} name={beer.name}/>
+            <DeleteFavorites id={beer.id} name={beer.name}/>{' '}
+            <WebSearchBeer name={beer.name} />
           </Card.Body>
         </Card>
       </FlexView>

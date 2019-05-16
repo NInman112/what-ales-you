@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addFavBeer } from '../actions/addFavBeer'
 import { getFavBeers } from '../actions/getFavBeers'
+import '../stylesheets/list.css';
 
 
 class SaveFavorites extends React.Component {
@@ -31,7 +32,7 @@ class SaveFavorites extends React.Component {
 
   render() {
     return(
-      <button onClick={this.onClick} disabled={this.state.isButtonDisabled}>{this.state.buttonText}</button>
+      <button onClick={this.onClick} disabled={this.state.isButtonDisabled} className='button'>{this.state.buttonText}</button>
     )
   }
 }
