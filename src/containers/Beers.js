@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import BeerList from '../components/BeerList'
 import '../stylesheets/App.css';
 
-class Beers extends React.Component {
+class Beers extends Component {
 
   render() {
 

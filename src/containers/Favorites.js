@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { getFavBeers } from '../actions/getFavBeers'
 import FavoriteList from '../components/FavoriteList'
-import { connect } from 'react-redux'
 
-export class Favorites extends Component {
+class Favorites extends Component {
 
   componentDidMount() {
     this.props.getFavBeers()

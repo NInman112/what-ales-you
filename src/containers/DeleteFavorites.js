@@ -1,9 +1,10 @@
-import React from 'react'
-import '../stylesheets/list.css';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { deleteFavBeer } from '../actions/deleteFavBeer'
+import '../stylesheets/list.css';
 
-class DeleteFavorites extends React.Component {
+
+class DeleteFavorites extends Component {
 
   onClick = (e) => {
     e.preventDefault()

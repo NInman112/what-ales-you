@@ -1,7 +1,6 @@
 import React from 'react'
 import DeleteFavorites from '../containers/DeleteFavorites'
 import WebSearchBeer from './WebSearchBeer'
-
 import FlexView from 'react-flexview'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'

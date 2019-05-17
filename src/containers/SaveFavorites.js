@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addFavBeer } from '../actions/addFavBeer'
 import { getFavBeers } from '../actions/getFavBeers'
 import '../stylesheets/list.css';
 
-class SaveFavorites extends React.Component {
+class SaveFavorites extends Component {
   state = {
     buttonText: 'Save Favorite',
     isButtonDisabled: false

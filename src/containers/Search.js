@@ -1,9 +1,10 @@
-import React from 'react'
-import '../stylesheets/Search.css';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import fetchBeers from '../actions/fetchBeers'
+import '../stylesheets/Search.css';
 
-class Search extends React.Component {
+
+class Search extends Component {
   constructor(props) {
     super(props)
     this.state = {
