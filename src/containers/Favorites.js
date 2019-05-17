@@ -14,6 +14,7 @@ export class Favorites extends Component {
     const noFavs = this.props.favBeers && this.props.favBeers.length === 0 ? "You haven't saved any favorites!" : ''
     return(
       <div>
+        <br></br>
         { noFavs }
         { <FavoriteList beers={this.props.favBeers} /> }
       </div>

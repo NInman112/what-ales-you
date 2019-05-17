@@ -1,13 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import BeerList from '../components/BeerList'
+import '../stylesheets/App.css';
+
 
 class Beers extends React.Component {
 
   render() {
+
       return(
       <div>
-        { this.props.loading ? <img src="spinner.gif" alt='loading-gif'/> : <BeerList beers={this.props.beers} /> }
+        { this.props.loading ? <p className='PTag'><img src='spinner.gif' alt='loading-gif'/></p> : <BeerList beers={this.props.beers} /> }
       </div>
     )
   }

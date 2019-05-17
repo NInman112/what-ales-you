@@ -17,3 +17,8 @@
   color: grey;
   text-decoration: none;
 }
+
+.button:disabled {
+  color: grey;
+  text-decoration: none;
+}
