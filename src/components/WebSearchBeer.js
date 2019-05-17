@@ -6,7 +6,7 @@ const WebSearchBeer = (props) => {
   const url = "http://www.google.com/webhp?#q=" + beer + "&btnI=I"
 
   return(
-      <a href={url} target='_blank' className='button'>I'm Feeling Lucky</a>
+      <a href={url} target='_blank' className='button' rel="noopener noreferrer">I'm Feeling Lucky</a>
   )
 }
 

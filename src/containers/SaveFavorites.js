@@ -4,7 +4,6 @@ import { addFavBeer } from '../actions/addFavBeer'
 import { getFavBeers } from '../actions/getFavBeers'
 import '../stylesheets/list.css';
 
-
 class SaveFavorites extends React.Component {
   state = {
     buttonText: 'Save Favorite',
