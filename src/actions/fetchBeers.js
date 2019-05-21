@@ -1,4 +1,5 @@
 import axios from 'axios'
+import React from 'React'
 let URL = 'https://cors-anywhere.herokuapp.com/https://sandbox-api.brewerydb.com/v2/search/?key='+ process.env.REACT_APP_API_KEY +'&q='
 
 const fetchBeers = (state) => {
