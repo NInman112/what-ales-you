@@ -15,7 +15,7 @@ class SaveFavorites extends Component {
   }
 
   componentWillReceiveProps() {
-    this.props.favBeers.map((beer) =>
+    this.props.favBeers && this.props.favBeers.map((beer) =>
       (beer.name === this.props.beer.name ? (
         this.setState({isButtonDisabled: true, buttonText: 'In Favorites'})
       ) : (''))
