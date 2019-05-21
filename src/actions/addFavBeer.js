@@ -1,7 +1,7 @@
 export const addFavBeer = (data) => {
   return dispatch => {
     dispatch({type: "ADD_FAV_BEERS"});
-    return fetch('/beers', {
+    return fetch('https://what-ales-you-api.herokuapp.com/beers', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
