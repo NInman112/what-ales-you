@@ -1,7 +1,12 @@
 .inputBar {
   font-size: 18px;
   display: 'block';
+<<<<<<< HEAD
   width: 55%;
+=======
+  max-width: 400px;
+  width: 100%;
+>>>>>>> f3a197d... formatting
 }
 
 .inputBar:hover {

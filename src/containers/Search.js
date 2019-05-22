@@ -26,7 +26,7 @@ class Search extends Component {
 
   render() {
       return(
-      <div>
+      <div className='inputContainer'>
         <form onSubmit={this.handleSubmit} >
           <input type='text' name='searchTerm' placeholder='Enter beer here' onChange={this.handleChange} value={this.state.searchTerm} className='inputBar'></input>
           <input type='submit' value='Search' className='inputButton'></input>
