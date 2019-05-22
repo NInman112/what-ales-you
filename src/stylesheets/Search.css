@@ -1,7 +1,8 @@
 .inputBar {
   font-size: 18px;
   display: 'block';
-  width: 80%;
+  max-width: 400px;
+  width: 100%;
 }
 
 .inputBar:hover {

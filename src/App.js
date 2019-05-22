@@ -9,7 +9,6 @@ import About from './components/About'
 class App extends Component {
 
   render(){
-    console.log(REACT_APP_API_KEY)
     return (
         <div className="App">
           <table className='titleBar'>
